@@ -26,36 +26,30 @@ public class ViewPagerAdapter extends FragmentPagerAdapter {
     @Override
     public Fragment getItem(int position) {
 
-        switch (position) {
-            case 0:
-                IndainFood indainFood = new IndainFood();
-                return indainFood;
-            case 1:
-                ChineseFood chineseFood = new ChineseFood();
-                return chineseFood;
-            case 2:
-                ItalianFood italianFood = new ItalianFood();
-                return italianFood;
-
-                default:
-                    return null;
+        if(position == 0) {
+            IndainFood indainFood = new IndainFood();
+            return indainFood;
+        }else if(position ==1) {
+            ChineseFood chineseFood = new ChineseFood();
+            return chineseFood;
         }
+        else {
+            ItalianFood italianFood = new ItalianFood();
+            return italianFood;
+        }
+
     }
 
 
 
 
-
-    // This determines the number of tabs
     @Override
     public int getCount() {
         return 3;
     }
 
-    // This determines the title for each tab
     @Override
     public CharSequence getPageTitle(int position) {
-        // Generate title based on item position
         switch (position) {
             case 0:
                 return "Indian";
