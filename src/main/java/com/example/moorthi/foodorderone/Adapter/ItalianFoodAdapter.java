@@ -21,13 +21,13 @@ import java.util.ArrayList;
  * Created by moorthy on 11/18/18.
  */
 
-public class IndianFoodAdapter extends RecyclerView.Adapter<IndianFoodAdapter.MyviewHolder>{
+public class ItalianFoodAdapter extends RecyclerView.Adapter<ItalianFoodAdapter.MyviewHolder> {
 
     Context activity;
-ArrayList<CommonModel> indianSpeclslist;
+    ArrayList<CommonModel> indianSpeclslist;
     CommonFoodPos pos;
 
-    public IndianFoodAdapter(Activity activityy, ArrayList<CommonModel> list, CommonFoodPos foodpos) {
+    public ItalianFoodAdapter(Activity activityy, ArrayList<CommonModel> list, CommonFoodPos foodpos) {
         this.activity = activityy;
         this.indianSpeclslist = list;
         this.pos = foodpos;
@@ -35,21 +35,20 @@ ArrayList<CommonModel> indianSpeclslist;
 
     @NonNull
     @Override
-    public IndianFoodAdapter.MyviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ItalianFoodAdapter.MyviewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.indian_foodfood_item,parent,false);
-        return new MyviewHolder(view);
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.chinease_food_item, parent, false);
+        return new ItalianFoodAdapter.MyviewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(@NonNull IndianFoodAdapter.MyviewHolder holder, int position) {
+    public void onBindViewHolder(@NonNull ItalianFoodAdapter.MyviewHolder holder, int position) {
 
-      //  String imageUrl="https://image.tmdb.org/t/p/w500/"+data.get(position).getPosterPath();
+        //  String imageUrl="https://image.tmdb.org/t/p/w500/"+data.get(position).getPosterPath();
         //Glide.with(activity).load(imageUrl).into(holder.movieimage);
 
         Glide.with(activity).load(indianSpeclslist.get(position).getImage())
                 .into(holder.foodimage);
-
         holder.title.setText(indianSpeclslist.get(position).getTitle());
         holder.price.setText(indianSpeclslist.get(position).getPrice());
 
@@ -60,10 +59,10 @@ ArrayList<CommonModel> indianSpeclslist;
         return indianSpeclslist.size();
     }
 
-    class MyviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+    class MyviewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        AppCompatImageView foodimage,priceimage;
-        AppCompatTextView title,price;
+        AppCompatImageView foodimage, priceimage;
+        AppCompatTextView title, price;
 
         public MyviewHolder(View itemView) {
             super(itemView);
@@ -76,7 +75,7 @@ ArrayList<CommonModel> indianSpeclslist;
 
         @Override
         public void onClick(View view) {
-            switch (view.getId()){
+            switch (view.getId()) {
                 case R.id.imageIndianFoods:
                     int poss = getAdapterPosition();
                     pos.indianfoodPos(poss);

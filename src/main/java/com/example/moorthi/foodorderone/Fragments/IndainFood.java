@@ -1,9 +1,6 @@
 package com.example.moorthi.foodorderone.Fragments;
 
-import android.app.Activity;
-import android.content.Context;
 import android.content.Intent;
-import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -15,19 +12,21 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.moorthi.foodorderone.Activity.BiriyaniDiscriptions;
+import com.example.moorthi.foodorderone.Activity.ChapatiDiscriptions;
+import com.example.moorthi.foodorderone.Activity.DosaDiscriptions;
 import com.example.moorthi.foodorderone.Adapter.IndianFoodAdapter;
-import com.example.moorthi.foodorderone.Interfaces.IndianFoodPos;
-import com.example.moorthi.foodorderone.Model.IndianSpecl;
+import com.example.moorthi.foodorderone.Interfaces.CommonFoodPos;
+import com.example.moorthi.foodorderone.Model.CommonModel;
 import com.example.moorthi.foodorderone.R;
 
 import java.util.ArrayList;
 
 
-public class IndainFood extends Fragment implements IndianFoodPos{
+public class IndainFood extends Fragment implements CommonFoodPos {
     RecyclerView recylerindianfoods;
     IndianFoodAdapter adapter;
-ArrayList<IndianSpecl> list = new ArrayList<>();
-    IndianSpecl indianSpecl;
+    ArrayList<CommonModel> list = new ArrayList<>();
+    CommonModel indianSpecl;
     @Override
         public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
             View v = inflater.inflate(R.layout.fragment_indain_food, container, false);
@@ -37,11 +36,11 @@ ArrayList<IndianSpecl> list = new ArrayList<>();
         }
 
     private void insertData() {
-        indianSpecl = new IndianSpecl("Chicken Biriyani","200",getResources().getDrawable(R.drawable.images));
+        indianSpecl = new CommonModel("Chicken Biriyani","200",getResources().getDrawable(R.drawable.images));
         list.add(indianSpecl);
-        indianSpecl = new IndianSpecl("Dosa","100",getResources().getDrawable(R.drawable.chapthi2));
+        indianSpecl = new CommonModel("Dosa","100",getResources().getDrawable(R.drawable.chapthi2));
         list.add(indianSpecl);
-        indianSpecl = new IndianSpecl("Chapati","100",getResources().getDrawable(R.drawable.dosa));
+        indianSpecl = new CommonModel("Chapati","100",getResources().getDrawable(R.drawable.dosa));
         list.add(indianSpecl);
 
     }
@@ -62,9 +61,11 @@ ArrayList<IndianSpecl> list = new ArrayList<>();
             Intent i = new Intent(getActivity(), BiriyaniDiscriptions.class);
             startActivity(i);
         }else if(pos ==1){
-
+            Intent i = new Intent(getActivity(), ChapatiDiscriptions.class);
+            startActivity(i);
         }else {
-
+            Intent i = new Intent(getActivity(), DosaDiscriptions.class);
+            startActivity(i);
         }
     }
 }

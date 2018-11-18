@@ -1,5 +1,28 @@
 <resources>
     <string name="app_name">FoodOrderone</string>
     <string name="chicken_biriyani">Chicken Biriyani</string>
-<string name="dicriptions">A world-renowned Indian dish, biryani takes time and practice to make but is worth every bit of the effort. Long-grained rice (like basmati) flavored with exotic spices, such as saffron, is layered with lamb, chicken, fish, or vegetables, and a thick gravy. The dish is then covered, its lid secured with dough, and then the biryani is cooked over a low flame. This is definitely a special occasion dish.</string>
+    <string name="dicriptions">A world-renowned Indian dish, biryani takes time and practice to make but is worth every bit of the effort. Long-grained rice (like basmati) flavored with exotic spices, such as saffron, is layered with lamb, chicken, fish, or vegetables, and a thick gravy. The dish is then covered, its lid secured with dough, and then the biryani is cooked over a low flame. This is definitely a special occasion dish.</string>
+    <string name="dosa">Dosa</string>
+    <string name="dosadiscriptions">These qualities make balancing the doshas very intuitive because, according to Ayurveda, like increases like and opposites balance. When any one of the doshas is aggravated, we can generally promote a return to balance by reducing the influence of that dosha’s qualities, while favoring their opposites. And if we know which specific qualities are aggravated, we can focus on pacifying those qualities in particular, while favoring foods, herbs, and experiences that amplify their opposing energies. The following table shows the ten pairs of opposites most commonly referenced in Ayurveda.
+    </string>
+    <string name="chapthidis">Chapati diameter and thickness vary from region to region. Chapatis made in domestic kitchens are usually not larger than 15 centimetres (6 in) to 18 centimetres (7 in) in diameter since the tava on which they are made comes in sizes that fit comfortably on a domestic stovetop. Tavas were traditionally made of unglazed earthenware, but are now typically made from metal. The shape of the rolling pin also varies from region to region. Some households simply use a kitchen worktop as a sort of pastry board, but round flat-topped "boards" made of wood, stone, or stainless steel are available specifically for rolling out chapatis.[5]
+</string>
+    <string name="noodels">Spinach Noodles</string>
+    <string name="fried">Fried Mashi</string>
+    <string name="noodelsdis">A ribbon pasta made from pasta dough that has had finely chopped spinach added to it when the dough was made. The noodles have a mild spinach flavor and are medium to dark green in color. They resemble medium or wide egg noodles in size and shape. The can be used in place of regular ribbon pasta to add a unique flavor to the dish they are added to.
+</string>
+    <string name="dumplings">Dumplings</string>
+    <string name="frieddis">On Apr. 20, 2012, Mr. Martin  Ms. Morresa from USA were excited to learn to cook Chinese dumplings and Mashi (a special food of Shaanxi) from a housewife when visiting a local Xian family during their China tour organized by Travelchinaguide. The most hard but interesting should be making the Mashi which needs good skills at kneading dough, rolling flour paste and making Mashi only with thumb.</string>
+    <string name="dumdis">Dumpling is a broad classification for a dish that consists of pieces of dough (made from a variety of starch sources) wrapped around a filling or of dough with no filling. The dough can be based on bread, flour, or potatoes, and may be filled with meat, fish, cheese, vegetables, fruits, or sweets. Dumplings may be prepared using a variety of methods, including baking, boiling, frying, simmering, or steaming, and are found in many world cuisines.
+</string>
+    <string name="panze">Panzenella</string>
+    <string name="pasta">Pasta</string>
+    <string name="panzelladis">Panzanella [pantsaˈnɛlla] or panmolle [pamˈmɔlle] is a Tuscan chopped salad of bread and tomatoes that is popular in the summer. It includes chunks of soaked stale bread and tomatoes, sometimes also onions and basil, dressed with olive oil and vinegar.
+</string>
+    <string name="pizza">Margherita Pizza</string>
+    <string name="pastadis">Pastas may be divided into two broad categories: dried (pasta secca) and fresh (pasta fresca). Most dried pasta is produced commercially via an extrusion process, although it can be produced in the home. Fresh pasta is traditionally produced by hand, sometimes with the aid of simple machines.[5] Fresh pastas available in grocery stores are produced commercially by large-scale machines.
+</string>
+    <string name="pizzadis">A widespread belief says that in June 1889 the pizzaiolo Raffaele Esposito, Pizzeria Brandi's chef, invented a dish called "Pizza Margherita" in honor of the Queen of Italy, Margherita of Savoy, and the Italian unification, since toppings are tomato (red), mozzarella (white) and basil (green), representing the same colors of the national flag of Italy.[2]
+    </string>
+    <string name="chapati">Chapati</string>
 </resources>

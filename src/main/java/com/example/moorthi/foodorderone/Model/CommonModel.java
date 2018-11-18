@@ -6,13 +6,13 @@ import android.graphics.drawable.Drawable;
  * Created by moorthy on 11/18/18.
  */
 
-public class IndianSpecl {
+public class CommonModel {
 
     String title,price;
     Drawable Image;
 
 
-    public IndianSpecl(String title, String price,Drawable img) {
+    public CommonModel(String title, String price, Drawable img) {
         this.title = title;
         this.price = price;
         this.Image = img;

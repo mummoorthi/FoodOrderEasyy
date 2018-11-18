@@ -6,7 +6,7 @@ import android.app.Activity;
  * Created by moorthy on 11/18/18.
  */
 
-public interface IndianFoodPos {
+public interface CommonFoodPos {
 
     void indianfoodPos(int pos);
 }

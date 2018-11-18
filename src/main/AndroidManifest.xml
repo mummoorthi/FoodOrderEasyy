@@ -16,7 +16,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.BiriyaniDiscriptions"></activity>
+        <activity android:name=".Activity.BiriyaniDiscriptions" />
+        <activity android:name=".Activity.DosaDiscriptions" />
+        <activity android:name=".Activity.ChapatiDiscriptions" />
+        <activity android:name=".Activity.SpanichNoodelsDiscriptions" />
+        <activity android:name=".Activity.FriedDiscriptions" />
+        <activity android:name=".Activity.DumplingsDiscriptions" />
+        <activity android:name=".Activity.PanzenellaDicriptions" />
+        <activity android:name=".Activity.PastaDiscriptions" />
+        <activity android:name=".Activity.MargheritaPizzaDiscriptions"></activity>
     </application>
 
 </manifest>
