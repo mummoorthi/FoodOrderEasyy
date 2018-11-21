@@ -26,4 +26,8 @@
     </string>
     <string name="chapati">Chapati</string>
     <string name="add_cart">Add Cart</string>
+    <string name="title">Title</string>
+    <string name="price">Price</string>
+    <string name="grand_total">Grand Total</string>
+    <string name="total">Total</string>
 </resources>

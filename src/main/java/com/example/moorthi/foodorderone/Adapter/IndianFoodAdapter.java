@@ -3,6 +3,7 @@ package com.example.moorthi.foodorderone.Adapter;
 import android.app.Activity;
 import android.content.Context;
 import android.support.annotation.NonNull;
+import android.support.v7.widget.AppCompatImageButton;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.support.v7.widget.RecyclerView;
@@ -13,9 +14,11 @@ import android.view.ViewGroup;
 import com.bumptech.glide.Glide;
 import com.example.moorthi.foodorderone.Interfaces.CommonFoodPos;
 import com.example.moorthi.foodorderone.Model.CommonModel;
+import com.example.moorthi.foodorderone.Pojo.FoodDetails;
 import com.example.moorthi.foodorderone.R;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Created by moorthy on 11/18/18.
@@ -24,10 +27,10 @@ import java.util.ArrayList;
 public class IndianFoodAdapter extends RecyclerView.Adapter<IndianFoodAdapter.MyviewHolder>{
 
     Context activity;
-ArrayList<CommonModel> indianSpeclslist;
+List<FoodDetails> indianSpeclslist;
     CommonFoodPos pos;
 
-    public IndianFoodAdapter(Activity activityy, ArrayList<CommonModel> list, CommonFoodPos foodpos) {
+    public IndianFoodAdapter(Activity activityy, List<FoodDetails> list, CommonFoodPos foodpos) {
         this.activity = activityy;
         this.indianSpeclslist = list;
         this.pos = foodpos;
@@ -44,14 +47,13 @@ ArrayList<CommonModel> indianSpeclslist;
     @Override
     public void onBindViewHolder(@NonNull IndianFoodAdapter.MyviewHolder holder, int position) {
 
-      //  String imageUrl="https://image.tmdb.org/t/p/w500/"+data.get(position).getPosterPath();
-        //Glide.with(activity).load(imageUrl).into(holder.movieimage);
-
-        Glide.with(activity).load(indianSpeclslist.get(position).getImage())
+        Glide.with(activity).load(indianSpeclslist.get(position).getImage_url())
                 .into(holder.foodimage);
 
-        holder.title.setText(indianSpeclslist.get(position).getTitle());
-        holder.price.setText(indianSpeclslist.get(position).getPrice());
+        holder.title.setText(indianSpeclslist.get(position).getItem_name());
+        holder.price.setText(indianSpeclslist.get(position).getItem_price().toString());
+        holder.countname.setText(String.valueOf(indianSpeclslist.get(position).getCount()));
+        holder.rateTitle.setText(String.valueOf(indianSpeclslist.get(position).getAverage_rating()));
 
     }
 
@@ -64,22 +66,34 @@ ArrayList<CommonModel> indianSpeclslist;
 
         AppCompatImageView foodimage,priceimage;
         AppCompatTextView title,price;
-
-        public MyviewHolder(View itemView) {
+AppCompatImageButton add,sub;
+AppCompatTextView countname,rateTitle;
+        MyviewHolder(View itemView) {
             super(itemView);
             foodimage = itemView.findViewById(R.id.imageIndianFoods);
             foodimage.setOnClickListener(this);
             priceimage = itemView.findViewById(R.id.imagePrice);
             title = itemView.findViewById(R.id.title);
             price = itemView.findViewById(R.id.priceAmount);
+            rateTitle = itemView.findViewById(R.id.rateTitle);
+            add = itemView.findViewById(R.id.add);
+            sub = itemView.findViewById(R.id.sub);
+            countname = itemView.findViewById(R.id.text);
+            add.setOnClickListener(this);
+            sub.setOnClickListener(this);
         }
 
         @Override
         public void onClick(View view) {
             switch (view.getId()){
                 case R.id.imageIndianFoods:
-                    int poss = getAdapterPosition();
-                    pos.indianfoodPos(poss);
+                    pos.indianfoodPos(getAdapterPosition(),"click");
+                    break;
+                case R.id.add:
+                    pos.indianfoodPos(getAdapterPosition(),"add");
+                    break;
+                case R.id.sub:
+                    pos.indianfoodPos(getAdapterPosition(),"remove");
                     break;
             }
         }

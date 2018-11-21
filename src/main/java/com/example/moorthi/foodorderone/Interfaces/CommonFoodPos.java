@@ -8,5 +8,5 @@ import android.app.Activity;
 
 public interface CommonFoodPos {
 
-    void indianfoodPos(int pos);
+    void indianfoodPos(int pos,String type);
 }

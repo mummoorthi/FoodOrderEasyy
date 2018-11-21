@@ -2,6 +2,9 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.moorthi.foodorderone">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -16,15 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Activity.BiriyaniDiscriptions" />
-        <activity android:name=".Activity.DosaDiscriptions" />
-        <activity android:name=".Activity.ChapatiDiscriptions" />
-        <activity android:name=".Activity.SpanichNoodelsDiscriptions" />
-        <activity android:name=".Activity.FriedDiscriptions" />
-        <activity android:name=".Activity.DumplingsDiscriptions" />
-        <activity android:name=".Activity.PanzenellaDicriptions" />
-        <activity android:name=".Activity.PastaDiscriptions" />
-        <activity android:name=".Activity.MargheritaPizzaDiscriptions"></activity>
+        <activity android:name=".Activity.BiriyaniDiscriptions"
+            android:screenOrientation="portrait"></activity>
+
+        <activity android:name=".Activity.CartDetails"
+            android:screenOrientation="portrait"></activity>
     </application>
 
 </manifest>

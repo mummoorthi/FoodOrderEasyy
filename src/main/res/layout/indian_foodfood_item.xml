@@ -2,15 +2,15 @@
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="10dp"
-    app:layout_constraintBottom_toBottomOf="parent"
+    android:background="@color/white"
+    android:layout_marginBottom="20dp"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
 <android.support.v7.widget.AppCompatImageView
     android:id="@+id/imageIndianFoods"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="150dp"
     android:scaleType="centerCrop"
     android:src="@drawable/images"
     />
@@ -51,4 +51,55 @@
         android:textColor="@color/btn_bg"
         android:fontFamily="sans-serif"
         />
-</android.support.constraint.ConstraintLayout>
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/addsubParent"
+        app:layout_constraintTop_toBottomOf="@id/imageIndianFoods"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/white_background"
+        android:layout_marginEnd="10dp"
+        android:padding="5dp"
+        >
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/sub"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:background="@drawable/subtract1"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            app:layout_constraintStart_toStartOf="parent"
+            android:layout_marginStart="40dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:textColor="@color/black"
+            android:paddingStart="30dp"
+            app:layout_constraintEnd_toStartOf="@id/add"
+            />
+        <android.support.v7.widget.AppCompatImageButton
+            android:id="@+id/add"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            app:layout_constraintStart_toEndOf="@id/text"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/addbutton"
+            />
+    </android.support.constraint.ConstraintLayout>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/rateTitle"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:text="Rating"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="5dp"
+        app:layout_constraintTop_toBottomOf="@id/imagePrice"
+        android:layout_marginStart="10dp"
+        android:background="@drawable/star_bacground"
+        />
+    </android.support.constraint.ConstraintLayout>
